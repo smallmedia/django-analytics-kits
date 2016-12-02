@@ -15,7 +15,7 @@ setup(
     license='New BSD',
     description='A Django app to get analytics data from Google Analytics and save them in other django app models',
     long_description=README,
-    url='https://www.example.com/',
+    url='https://github.com/smallmedia/django-analytics-kits',
     author='SmallMediaLab',
     author_email='lab@smallmedia.org.uk',
     classifiers=[
