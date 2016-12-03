@@ -35,7 +35,7 @@ Quick start
     from django.db import models
     from analytics_kits.models import AnalyticsResult
 
-    class MostPopular(models.Model, AnalyiticsKitsMixin):
+    class Article(models.Model, AnalyiticsKitsMixin):
         # model fields
         ...
 
