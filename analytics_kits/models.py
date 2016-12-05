@@ -79,6 +79,10 @@ class AnalyticsResult(models.Model):
         return "-ga:pageviews"
 
     @staticmethod
+    def get_results_count():
+        return 50
+
+    @staticmethod
     def get_filters():
         return 'ga:pagePath!~^/$;ga:pagePath!~^/search/*;ga:pagePath!~^/accounts*;ga:pagePath!~^/iw-admin*;ga:pagePath!~^/[A-z-]+/$'
 
