@@ -18,7 +18,7 @@ class ObjectUrl(models.Model):
 
 
 # Mixin Model to record Urls into ObjectUrl
-class AnalyiticsKitsMixin(models.Model):
+class AnalyiticsKitsMixin(object):
 
     def save(self, force_insert=False, force_update=False, using=None,
              update_fields=None):
@@ -39,9 +39,6 @@ class AnalyiticsKitsMixin(models.Model):
             )
         obj_url.url = url
         obj_url.save()
-
-        class Meta:
-            abstract = True
 
 
 # Most popular abstract model
