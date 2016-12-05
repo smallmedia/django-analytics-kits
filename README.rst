@@ -23,9 +23,13 @@ Quick start
         'analytics_kits',
     ]
 
-3. Define your Google Analytics API service account and private_key in the Django admin section of the Analytics Kits.
+3. Run the migration command to create account model::
+    
+    python manage.py migrate
 
-4. Create a model in your app to record the analytics results. This model should be inherited from `analytics_kits.models.AnalyticsResult`::
+4. Define your Google Analytics API service account and private_key in the Django admin section of the Analytics Kits.
+
+5. Create a model in your app to record the analytics results. This model should be inherited from `analytics_kits.models.AnalyticsResult`::
     
     from analytics_kits.models import AnalyticsResult
 
@@ -33,7 +37,7 @@ Quick start
         pass
 
 
-5. Use `analytics_kits.models.AnalyiticsKitsMixin` Mixin for every content type you want get the analytics results for::
+6. Use `analytics_kits.models.AnalyiticsKitsMixin` Mixin for every content type you want get the analytics results for::
 
     from django.db import models
     from analytics_kits.models import AnalyticsResult
@@ -46,7 +50,7 @@ Quick start
 
 
 
-6. set a Cron job for the management commands `analytics_results` to connect to google analytics API and update your app model::
+7. set a Cron job for the management commands `analytics_results` to connect to google analytics API and update your app model::
 
     python manage.py analytics_results --app YOUR_APP_NAME --model YOUR_MODEL_NAME --view VIEW_ID --account ACCOUNT_NAME
 
