@@ -76,7 +76,7 @@ class Command(BaseCommand):
         account = models.Account.objects.get(
             account_name=account_name)
         key = kitcrypt.decrypt(account.private_key)
-        signer = kitcrypt.Signer.from_string(key)
+        signer = crypt.Signer.from_string(key)
 
         credentials = ServiceAccountCredentials(
             crypt.decrypt(account.service_account), signer,
