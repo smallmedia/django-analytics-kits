@@ -86,6 +86,9 @@ class AnalyticsResult(models.Model):
     def get_filters():
         return 'ga:pagePath!~^/$;ga:pagePath!~^/search/*;ga:pagePath!~^/accounts*;ga:pagePath!~^/iw-admin*;ga:pagePath!~^/[A-z-]+/$'
 
+    def __unicode__(self):
+        return self.title
+
     #  save data passed by the mnagement command to the model
     @classmethod
     def process_data(self, data, date):
