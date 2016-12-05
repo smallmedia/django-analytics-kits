@@ -11,6 +11,9 @@ Quick start
 
 1. Install the package::
 
+    # For Ubuntu it requires libffi-dev to be installed on the system.
+    # sudo apt-get install libffi-dev
+
     pip install django-analytics-kits
 
 2. Add "analytics_kits" to your INSTALLED_APPS setting like this::
