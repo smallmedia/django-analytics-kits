@@ -37,8 +37,8 @@ class AnalyiticsKitsMixin(object):
                 object_id=self.pk,
                 defaults={'url': url}
             )
-        obj_url.url = url
-        obj_url.save()
+        obj_url[0].url = url
+        obj_url[0].save()
 
 
 # Most popular abstract model
