@@ -79,7 +79,7 @@ class Command(BaseCommand):
         signer = crypt.Signer.from_string(key)
 
         credentials = ServiceAccountCredentials(
-            crypt.decrypt(account.service_account), signer,
+            kitcrypt.decrypt(account.service_account), signer,
             scopes='https://www.googleapis.com/auth/analytics.readonly')
 
         http = httplib2.Http()
