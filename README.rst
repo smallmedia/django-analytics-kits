@@ -40,7 +40,7 @@ Quick start
 6. Use `analytics_kits.models.AnalyiticsKitsMixin` Mixin for every content type you want get the analytics results for::
 
     from django.db import models
-    from analytics_kits.models import AnalyticsResult
+    from analytics_kits.models import AnalyiticsKitsMixin
 
     class Article(models.Model, AnalyiticsKitsMixin):
         # model fields
