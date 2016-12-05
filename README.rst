@@ -52,7 +52,7 @@ Quick start
 
 7. set a Cron job for the management commands `analytics_results` to connect to google analytics API and update your app model::
 
-    python manage.py most_popular --app YOUR_APP_NAME --model YOUR_MODEL_NAME --view VIEW_ID --account ACCOUNT_NAME
+    python manage.py analytics_results --app YOUR_APP_NAME --model YOUR_MODEL_NAME --view VIEW_ID --account ACCOUNT_NAME
 
     # YOUR_APP_NAME: Name of the application that you created your content models inside
     # YOUR_MODEL_NAME: Name of the inherited model from `AnalyticsResult`
