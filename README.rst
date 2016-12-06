@@ -28,7 +28,8 @@ Quick start
     python manage.py migrate
 
 4. Define your Google Analytics API service account and private_key in the Django admin section of the Analytics Kits.
-    If you want to know more about how to generate a private_key and a google service account you can read this [Google document](https://developers.google.com/identity/protocols/OAuth2ServiceAccount)
+  If you want to know more about how to generate a private_key and a google service account you can have a look into this link: https://developers.google.com/identity/protocols/OAuth2ServiceAccount
+  This service account should have read access to the google analytic view you want to get the information for.
 
 5. Create a model in your app to record the analytics results. This model should be inherited from `analytics_kits.models.AnalyticsResult`::
     
