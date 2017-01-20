@@ -6,10 +6,8 @@ from django.apps import apps
 from apiclient.discovery import build
 from oauth2client.service_account import ServiceAccountCredentials
 from oauth2client import crypt
-from optparse import make_option
 from datetime import datetime, timedelta
 
-from analytics_kits import settings
 from analytics_kits import models
 from analytics_kits.utils import KitCrypt
 

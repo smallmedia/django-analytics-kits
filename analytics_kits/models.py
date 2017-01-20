@@ -16,9 +16,12 @@ class ObjectUrl(models.Model):
     object_id = models.PositiveIntegerField()
     url = models.TextField()
 
+    def __unicode__(self):
+        return self.url
+
 
 # Mixin Model to record Urls into ObjectUrl
-class AnalyiticsKitsMixin(object):
+class AnalyiticsKitsMixin(models.Model):
 
     def save(self, force_insert=False, force_update=False, using=None,
              update_fields=None):
@@ -39,6 +42,9 @@ class AnalyiticsKitsMixin(object):
             )
         obj_url[0].url = url
         obj_url[0].save()
+
+    class Meta:
+        abstract = True
 
 
 # Most popular abstract model

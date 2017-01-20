@@ -1,6 +1,7 @@
 import os
 from setuptools import find_packages, setup
 
+print(find_packages())
 with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     README = readme.read()
 
@@ -9,7 +10,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-analytics-kits',
-    version='0.1',
+    version='0.1.8',
     packages=find_packages(),
     include_package_data=True,
     license='New BSD',
@@ -27,6 +28,7 @@ setup(
     ],
     install_requires=[
         'PyNaCl',
-        'google-api-python-client'
-    ],
+        'google-api-python-client',
+        'mock'
+    ]
 )

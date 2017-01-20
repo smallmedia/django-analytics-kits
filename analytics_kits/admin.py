@@ -21,3 +21,5 @@ class AcountsAdmin(admin.ModelAdmin):
         obj.save()
 
 admin.site.register(models.Account, AcountsAdmin)
+
+admin.site.register(models.ObjectUrl)
