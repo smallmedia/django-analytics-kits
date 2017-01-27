@@ -4,4 +4,4 @@ python:
   - "2.7"
   
 # command to run tests
-script: runtests
+script: python runtests.py
